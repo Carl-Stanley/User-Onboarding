@@ -54,12 +54,12 @@ const FormikLoginForm = withFormik({
     axios
         .post("https://reqres.in/api/users", values)
         .then(res => {
-          console.log(res); // Data was created successfully and logs to console
+          console.log(res); // It worked. 
           resetForm();
           setSubmitting(false);
         })
         .catch(err => {
-          console.log("Another Error? ",err); // There was an error creating the data and logs to console
+          console.log("Another Error? ",err); // Another error? Get used to failure. 
           setSubmitting(false);
         });    
   }
