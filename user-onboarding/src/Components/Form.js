@@ -2,7 +2,9 @@ import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-function LoginForm({ values, errors, touched }) {
+
+
+function SubmitForm({ values, errors, touched }) {
   return (
     <Form>
         <div>
@@ -63,6 +65,6 @@ const FormikLoginForm = withFormik({
           setSubmitting(false);
         });    
   }
-})(LoginForm);
+})(SubmitForm);
 
 export default FormikLoginForm;
