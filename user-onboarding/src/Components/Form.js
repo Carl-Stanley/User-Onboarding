@@ -2,7 +2,7 @@ import React from "react";
 import { withFormik, Form, Field } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
-function LoginForm({ values, errors, touched, isSubmitting }) {
+function LoginForm({ values, errors, touched }) {
   return (
     <Form>
         <div>
@@ -50,7 +50,7 @@ const FormikLoginForm = withFormik({
        .required("You must accept the TOS!")  
   }),
 
-  handleSubmit(values,{ resetForm, setErrors, setSubmitting }) {
+  handleSubmit(values,{ resetForm, setSubmitting }) {
     axios
         .post("https://reqres.in/api/users", values)
         .then(res => {
