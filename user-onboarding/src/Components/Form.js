@@ -19,9 +19,9 @@ function LoginForm({ values, errors, touched, isSubmitting }) {
       </div>
       <label>
         <Field type="checkbox" name="tos" checked={values.tos} />
-        Accept TOS
+        Terms of Service
       </label>
-      <button type="submit">Submit!</button>
+      <button type="submit">Submit</button>
     </Form>
   );
 }
