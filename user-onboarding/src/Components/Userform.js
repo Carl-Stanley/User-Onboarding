@@ -1,8 +1,12 @@
 import React from "react";
 
-function userList() {
+function UserList() {
+    
     return (
-      <Form>
-            <div></div>
-      </Form>
+       
+            <div className="theUsers"></div>
+       
+    
     )};
+
+    export default UserList;

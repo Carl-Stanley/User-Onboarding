@@ -1,25 +1,27 @@
 import React, {useState} from 'react';
-//import logo from './logo.svg';
 import './App.css';
 import './Components/Form';
 import SubmitForm from './Components/Form';
-
+import UserList from './Components/Userform';
 
 function App() {
    
   
   const [user, setUsers] = useState([]);
- //const addNewMember = teamMember => {
-  //setMembers([...members, teamMember]);
+    
+  const updateTeamlist = (props) => {
+    setUsers({...user, props});
+  }
 
+   
 
   return (
     <div className="App">     
      
      <div className="form-Header"></div>
 
-    <SubmitForm />
-
+    <SubmitForm updateTeamlist={updateTeamlist}/>
+    <UserList />
     </div>
   );
 }
